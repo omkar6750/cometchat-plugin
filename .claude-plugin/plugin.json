@@ -1,0 +1,12 @@
+{
+  "name": "cometchat-init",
+  "version": "0.1.0",
+  "description": "Integrate CometChat UI Kit into any app. Auto-detects framework, guides setup, and generates a fully functional chat experience.",
+  "author": {
+    "name": "Omkar",
+    "url": "https://www.cometchat.com"
+  },
+  "homepage": "https://www.cometchat.com/docs",
+  "license": "MIT",
+  "keywords": ["cometchat", "chat", "messaging", "uikit", "react", "nextjs", "astro", "flutter", "android", "ios"]
+}
