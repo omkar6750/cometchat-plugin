@@ -52,14 +52,14 @@ Read the following files (whichever exist) to identify the platform:
     - `"@react-router/dev"` present → **React Router v7**
     - `"react-router-dom"` present (no `@react-router/dev`) → **React Router v6**
     - `"astro"` present → **Astro**
-    - `"react-native"` present → **React Native** _(coming soon)_
-    - `"expo"` present → **Expo** _(coming soon)_
+    - `"expo"` present → **Expo**
+    - `"react-native"` present (no `"expo"`) → **React Native (CLI)**
     - `"react"` present (none of the above) → **React.js / Vite**
     - None of the above → **Unknown web project**
 
-2. `pubspec.yaml` exists → **Flutter** _(coming soon)_
+2. `pubspec.yaml` exists → **Flutter**
 
-3. `app/build.gradle` or `build.gradle.kts` exists → **Android** _(coming soon)_
+3. `app/build.gradle` or `build.gradle.kts` exists (no `package.json` / `pubspec.yaml`) → **Android**
 
 4. `*.xcodeproj` or `Package.swift` exists → **iOS** _(coming soon)_
 
@@ -86,10 +86,14 @@ If the user corrects you, use their answer.
 - Next.js → `cometchat-react-nextjs`
 - React Router v6 / v7 → `cometchat-react-react-router`
 - Astro → `cometchat-react-astro`
+- React Native (CLI) → `cometchat-react-native-cli`
+- React Native (Expo) → `cometchat-react-native-expo`
+- Flutter → `cometchat-flutter`
+- Android (native Kotlin/Java) → `cometchat-android`
 
 **Coming soon (not yet available):**
 
-- React Native, Expo, Flutter, Android, iOS
+- iOS (Swift/SwiftUI)
 
 If the detected platform is _coming soon_, say:
 
@@ -147,12 +151,16 @@ Only ask the user for values still missing after the steps above.
 
 Based on the detected platform, follow the corresponding skill **in full**, passing through the chosen experience and credentials:
 
-| Platform              | Skill to follow                |
-| --------------------- | ------------------------------ |
-| React.js / Vite / CRA | `cometchat-react-reactjs`      |
-| Next.js               | `cometchat-react-nextjs`       |
-| React Router v6 / v7  | `cometchat-react-react-router` |
-| Astro                 | `cometchat-react-astro`        |
+| Platform              | Skill to follow                  |
+| --------------------- | -------------------------------- |
+| React.js / Vite / CRA | `cometchat-react-reactjs`        |
+| Next.js               | `cometchat-react-nextjs`         |
+| React Router v6 / v7  | `cometchat-react-react-router`   |
+| Astro                 | `cometchat-react-astro`          |
+| React Native (CLI)    | `cometchat-react-native-cli`     |
+| Expo                  | `cometchat-react-native-expo`    |
+| Flutter               | `cometchat-flutter`              |
+| Android               | `cometchat-android`              |
 
 Start from **Step 0** of the target skill (idempotency check). Skip steps the target skill says to skip. Apply the experience the user chose in Step 4 (maps to Step 7A / 7B / 7C in the target skill).
 
